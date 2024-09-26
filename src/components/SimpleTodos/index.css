@@ -1,0 +1,22 @@
+/* Write your CSS here */
+.bg-container {
+  background-color: #ffc2a0;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  width: 700px;
+}
+.list-cont {
+  list-style-type: none;
+}
