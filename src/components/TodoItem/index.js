@@ -33,41 +33,45 @@ const TodoItem = props => {
 
   return (
     <li className="todo-item">
-      {isSaved ? (
-        <div className="input-element">
-          <input type="checkbox" id={`text${id}`} onChange={strikeline} />
-          <p className={striked} htmlFor={`text${id}`}>
-            {title}
-          </p>
-        </div>
-      ) : (
-        <input
-          type="text"
-          className="editedInput"
-          value={newTitle}
-          onChange={onChangeHandler}
-        />
-      )}
-      {isSaved ? (
-        <button
-          type="button"
-          className="delete-btn edit-btn"
-          onClick={onEditClick}
-        >
-          Edit
+      <div>
+        {isSaved ? (
+          <div className="input-element">
+            <input type="checkbox" id={`text${id}`} onChange={strikeline} />
+            <label className={striked} htmlFor={`text${id}`}>
+              {title}
+            </label>
+          </div>
+        ) : (
+          <input
+            type="text"
+            className="editedInput"
+            value={newTitle}
+            onChange={onChangeHandler}
+          />
+        )}
+      </div>
+      <div>
+        {isSaved ? (
+          <button
+            type="button"
+            className="delete-btn edit-btn"
+            onClick={onEditClick}
+          >
+            Edit
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="delete-btn save-btn"
+            onClick={onSaveTodo}
+          >
+            Save
+          </button>
+        )}
+        <button type="button" className="delete-btn" onClick={onDeleteTodo}>
+          Delete
         </button>
-      ) : (
-        <button
-          type="button"
-          className="delete-btn save-btn"
-          onClick={onSaveTodo}
-        >
-          Save
-        </button>
-      )}
-      <button type="button" className="delete-btn" onClick={onDeleteTodo}>
-        Delete
-      </button>
+      </div>
     </li>
   )
 }

@@ -6,6 +6,13 @@
   margin-bottom: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  .todo-item {
+    display: block;
+    text-align: center;
+  }
+}
+
 .title {
   color: #000000;
   font-family: 'Roboto';
@@ -37,7 +44,6 @@
 }
 
 .input-element {
-  width: 600px;
   display: flex;
   align-items: center;
 }
