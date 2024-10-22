@@ -54,10 +54,21 @@ class SimpleTodos extends Component {
     }
 
     const onAddTodo = () => {
-      if (titleInput === '') return
+      if (titleInput.trim() === '') return
+
+      const regex = /(.*?)(\d+)?$/ // Match text followed by a number
+      const match = titleInput.trim().match(regex)
+
+      const taskTitle = match[1].trim() // Extract the title text
+      const count = parseInt(match[2]) || 1 // Extract the number or default to 1
+
+      const newTodos = Array.from({length: count}, () => ({
+        id: uuidV4(),
+        title: taskTitle,
+      }))
 
       this.setState(prevState => ({
-        todosList: [...prevState.todosList, {id: uuidV4(), title: titleInput}],
+        todosList: [...prevState.todosList, ...newTodos],
         titleInput: '',
       }))
     }

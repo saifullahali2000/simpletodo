@@ -9,8 +9,10 @@
 .title {
   color: #000000;
   font-family: 'Roboto';
+  font-size: 16px;
   flex: 1;
   display: block;
+  margin-left: 10px;
 }
 
 .editedInput {
@@ -21,10 +23,11 @@
 .title-is-checked {
   color: #000000;
   font-family: 'Roboto';
-  font-size: 16px;
+  font-size: 25px;
   flex: 1;
   display: block;
   text-decoration: line-through;
+  margin-left: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -34,7 +37,7 @@
 }
 
 .input-element {
-  width: 60%;
+  width: 600px;
   display: flex;
   align-items: center;
 }

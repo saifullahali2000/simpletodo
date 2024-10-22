@@ -36,9 +36,9 @@ const TodoItem = props => {
       {isSaved ? (
         <div className="input-element">
           <input type="checkbox" id={`text${id}`} onChange={strikeline} />
-          <label className={striked} htmlFor={`text${id}`}>
+          <p className={striked} htmlFor={`text${id}`}>
             {title}
-          </label>
+          </p>
         </div>
       ) : (
         <input
